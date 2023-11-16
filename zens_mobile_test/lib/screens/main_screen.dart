@@ -169,14 +169,19 @@ class _Content extends StatelessWidget {
               return value.unVotedList;
             },
             builder: (context, value, _) {
-              String content =
-                  "That's all the jokes for today! Come back another day!";
-              if (value.isNotEmpty) {
-                content = value.first;
+              if (value.isEmpty) {
+                return Text(
+                  '''That's all the jokes for today!\n Come back another day!''',
+                  textAlign: TextAlign.center,
+                  style: context.bodyMedium.copyWith(
+                    fontWeight: FontWeight.w500,
+                    color: const Color(0xff6E6E6E),
+                  ),
+                );
               }
 
               return Text(
-                content,
+                value.first,
                 style: context.bodyMedium.copyWith(
                   fontWeight: FontWeight.w500,
                   color: const Color(0xff6E6E6E),
