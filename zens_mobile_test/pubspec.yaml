@@ -1,0 +1,43 @@
+name: zens_mobile_test
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.1.5 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.9.0
+  shared_preferences: ^2.2.2
+  provider: ^6.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  flutter_gen_runner: ^5.1.0+1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+flutter_gen:
+  assets:
+    outputs:
+      class_name: Assets
+      style: camel-case
+  integrations:
+    flutter_svg: true
+  fonts:
+    outputs:
+      class_name: MyFontFamily
+    enabled: true
+  exclude: null
